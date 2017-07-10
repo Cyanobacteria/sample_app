@@ -7,7 +7,10 @@ end
 #jquery
 gem "jquery-rails"
 
+gem 'will_paginate',           '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
 
+gem 'faker',          '1.6.6'
 #Password hash by bcrypt
 gem 'bcrypt', '3.1.11'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
