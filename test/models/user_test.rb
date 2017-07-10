@@ -50,14 +50,17 @@ class UserTest < ActiveSupport::TestCase
     assert_not duplicate_user.valid?
   end
   
- # test "the email be saved that should be downcase"
- #   mmce = "FOO@EXample.com"
- #   @user.email = mmce    
- #   @user.save
- #   assert_equal mmce.downcase, @user.reload.email
- # end 
+  test "the email be saved that should be downcase" do
+    mmce = "VVDDWW@eXample.com"
+    @user.email = mmce    
+    @user.save
+   #assert_equal mmce.downcase, @user.reload.email
+    assert mmce.downcase == @user.reload.email
+  end 
 
-
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
 
 
 end
